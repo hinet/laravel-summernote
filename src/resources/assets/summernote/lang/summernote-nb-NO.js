@@ -1,4 +1,4 @@
-(function ($) {
+(function($) {
   $.extend($.summernote.lang, {
     'nb-NO': {
       font: {
@@ -9,7 +9,9 @@
         height: 'Linjehøyde',
         name: 'Skrifttype',
         strikethrough: 'Gjennomstrek',
-        size: 'Skriftstørrelse'
+        subscript: 'Subscript',
+        superscript: 'Superscript',
+        size: 'Skriftstørrelse',
       },
       image: {
         image: 'Bilde',
@@ -20,17 +22,25 @@
         floatLeft: 'Flyt til venstre',
         floatRight: 'Flyt til høyre',
         floatNone: 'Fjern flyt',
+        shapeRounded: 'Form: Rundet',
+        shapeCircle: 'Form: Sirkel',
+        shapeThumbnail: 'Form: Miniatyr',
+        shapeNone: 'Form: Ingen',
         dragImageHere: 'Dra et bilde hit',
+        dropImage: 'Drop image or Text',
         selectFromFiles: 'Velg fra filer',
+        maximumFileSize: 'Max filstørrelse',
+        maximumFileSizeError: 'Maks filstørrelse overskredet.',
         url: 'Bilde-URL',
-        remove: 'Fjern bilde'
+        remove: 'Fjern bilde',
+        original: 'Original',
       },
       video: {
         video: 'Video',
         videoLink: 'Videolenke',
         insert: 'Sett inn video',
         url: 'Video-URL',
-        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion eller Youku)'
+        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion eller Youku)',
       },
       link: {
         link: 'Lenke',
@@ -39,17 +49,24 @@
         edit: 'Rediger',
         textToDisplay: 'Visningstekst',
         url: 'Til hvilken URL skal denne lenken peke?',
-        openInNewWindow: 'Åpne i nytt vindu'
+        openInNewWindow: 'Åpne i nytt vindu',
       },
       table: {
-        table: 'Tabell'
+        table: 'Tabell',
+        addRowAbove: 'Legg til rad over',
+        addRowBelow: 'Legg til rad under',
+        addColLeft: 'Legg til kolonne på venstre side',
+        addColRight: 'Legg til kolonne på høyre side',
+        delRow: 'Slett rad',
+        delCol: 'Slett kolonne',
+        delTable: 'Slett tabell',
       },
       hr: {
-        insert: 'Sett inn horisontal linje'
+        insert: 'Sett inn horisontal linje',
       },
       style: {
         style: 'Stil',
-        p: 'p',
+        p: 'Paragraf',
         blockquote: 'Sitat',
         pre: 'Kode',
         h1: 'Overskrift 1',
@@ -57,16 +74,16 @@
         h3: 'Overskrift 3',
         h4: 'Overskrift 4',
         h5: 'Overskrift 5',
-        h6: 'Overskrift 6'
+        h6: 'Overskrift 6',
       },
       lists: {
         unordered: 'Punktliste',
-        ordered: 'Nummerert liste'
+        ordered: 'Nummerert liste',
       },
       options: {
         help: 'Hjelp',
         fullscreen: 'Fullskjerm',
-        codeview: 'HTML-visning'
+        codeview: 'HTML-visning',
       },
       paragraph: {
         paragraph: 'Avsnitt',
@@ -75,7 +92,7 @@
         left: 'Venstrejustert',
         center: 'Midtstilt',
         right: 'Høyrejustert',
-        justify: 'Blokkjustert'
+        justify: 'Blokkjustert',
       },
       color: {
         recent: 'Nylig valgt farge',
@@ -85,7 +102,7 @@
         transparent: 'Gjennomsiktig',
         setTransparent: 'Sett gjennomsiktig',
         reset: 'Nullstill',
-        resetToDefault: 'Nullstill til standard'
+        resetToDefault: 'Nullstill til standard',
       },
       shortcut: {
         shortcuts: 'Hurtigtaster',
@@ -93,12 +110,45 @@
         textFormatting: 'Tekstformatering',
         action: 'Handling',
         paragraphFormatting: 'Avsnittsformatering',
-        documentStyle: 'Dokumentstil'
+        documentStyle: 'Dokumentstil',
+      },
+      help: {
+        'insertParagraph': 'Sett inn avsnitt',
+        'undo': 'Angre siste handling',
+        'redo': 'Gjør om siste handling',
+        'tab': 'Tab',
+        'untab': 'Untab',
+        'bold': 'Angi en fet stil',
+        'italic': 'Angi en kursiv stil',
+        'underline': 'Sett en understreket stil',
+        'strikethrough': 'Sett en gjennomgående sti',
+        'removeFormat': 'Tøm formattering',
+        'justifyLeft': 'Angi venstrejustering',
+        'justifyCenter': 'Angi sentrert justering',
+        'justifyRight': 'Angi høyre justering',
+        'justifyFull': 'Angi full justering',
+        'insertUnorderedList': 'Bytt uordnet liste',
+        'insertOrderedList': 'Bytt sortert liste',
+        'outdent': 'Utrykk på valgt avsnitt',
+        'indent': 'Innrykk på valgt avsnitt',
+        'formatPara': 'Endre gjeldende blokkformat til et avsnitt (P-kode)',
+        'formatH1': 'Endre gjeldende blokkformat til H1',
+        'formatH2': 'Endre gjeldende blokkformat til H2',
+        'formatH3': 'Endre gjeldende blokkformat til H3',
+        'formatH4': 'Endre gjeldende blokkformat til H4',
+        'formatH5': 'Endre gjeldende blokkformat til H5',
+        'formatH6': 'Endre gjeldende blokkformat til H6',
+        'insertHorizontalRule': 'Sett inn horisontal deler',
+        'linkDialog.show': 'Vis koblingsdialog',
       },
       history: {
         undo: 'Angre',
-        redo: 'Gjør om'
-      }
-    }
+        redo: 'Gjør om',
+      },
+      specialChar: {
+        specialChar: 'SPESIELLE TEGN',
+        select: 'Velg spesielle tegn',
+      },
+    },
   });
 })(jQuery);

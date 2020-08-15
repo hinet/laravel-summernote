@@ -1,6 +1,6 @@
 // Starsoft Mongolia LLC Temuujin Ariunbold
 
-(function ($) {
+(function($) {
   $.extend($.summernote.lang, {
     'mn-MN': {
       font: {
@@ -13,7 +13,7 @@
         superscript: 'Дээд илтгэгч',
         subscript: 'Доод илтгэгч',
         strikethrough: 'Дарах',
-        size: 'Хэмжээ'
+        size: 'Хэмжээ',
       },
       image: {
         image: 'Зураг',
@@ -29,18 +29,20 @@
         shapeThumbnail: 'Хүрээ: Хураангуй',
         shapeNone: 'Хүрээгүй',
         dragImageHere: 'Зургийг энд чирч авчирна уу',
+        dropImage: 'Drop image or Text',
         selectFromFiles: 'Файлуудаас сонгоно уу',
         maximumFileSize: 'Файлын дээд хэмжээ',
         maximumFileSizeError: 'Файлын дээд хэмжээ хэтэрсэн',
         url: 'Зургийн URL',
-        remove: 'Зургийг устгах'
+        remove: 'Зургийг устгах',
+        original: 'Original',
       },
       video: {
         video: 'Видео',
         videoLink: 'Видео холбоос',
         insert: 'Видео оруулах',
         url: 'Видео URL?',
-        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion болон Youku)'
+        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion болон Youku)',
       },
       link: {
         link: 'Холбоос',
@@ -49,13 +51,20 @@
         edit: 'Засварлах',
         textToDisplay: 'Харуулах бичвэр',
         url: 'Энэ холбоос хаашаа очих вэ?',
-        openInNewWindow: 'Шинэ цонхонд нээх'
+        openInNewWindow: 'Шинэ цонхонд нээх',
       },
       table: {
-        table: 'Хүснэгт'
+        table: 'Хүснэгт',
+        addRowAbove: 'Add row above',
+        addRowBelow: 'Add row below',
+        addColLeft: 'Add column left',
+        addColRight: 'Add column right',
+        delRow: 'Delete row',
+        delCol: 'Delete column',
+        delTable: 'Delete table',
       },
       hr: {
-        insert: 'Хэвтээ шугам оруулах'
+        insert: 'Хэвтээ шугам оруулах',
       },
       style: {
         style: 'Хэв маяг',
@@ -67,16 +76,16 @@
         h3: 'Гарчиг 3',
         h4: 'Гарчиг 4',
         h5: 'Гарчиг 5',
-        h6: 'Гарчиг 6'
+        h6: 'Гарчиг 6',
       },
       lists: {
         unordered: 'Эрэмбэлэгдээгүй',
-        ordered: 'Эрэмбэлэгдсэн'
+        ordered: 'Эрэмбэлэгдсэн',
       },
       options: {
         help: 'Тусламж',
         fullscreen: 'Дэлгэцийг дүүргэх',
-        codeview: 'HTML-Code харуулах'
+        codeview: 'HTML-Code харуулах',
       },
       paragraph: {
         paragraph: 'Хэсэг',
@@ -85,7 +94,7 @@
         left: 'Зүүн тийш эгнүүлэх',
         center: 'Төвд эгнүүлэх',
         right: 'Баруун тийш эгнүүлэх',
-        justify: 'Мөрийг тэгшлэх'
+        justify: 'Мөрийг тэгшлэх',
       },
       color: {
         recent: 'Сүүлд хэрэглэсэн өнгө',
@@ -95,7 +104,7 @@
         transparent: 'Тунгалаг',
         setTransparent: 'Тунгалаг болгох',
         reset: 'Анхдагч өнгөөр тохируулах',
-        resetToDefault: 'Хэвд нь оруулах'
+        resetToDefault: 'Хэвд нь оруулах',
       },
       shortcut: {
         shortcuts: 'Богино холбоос',
@@ -103,16 +112,46 @@
         textFormatting: 'Бичвэрийг хэлбэржүүлэх',
         action: 'Үйлдэл',
         paragraphFormatting: 'Догол мөрийг хэлбэржүүлэх',
-        documentStyle: 'Бичиг баримтын хэв загвар'
+        documentStyle: 'Бичиг баримтын хэв загвар',
+        extraKeys: 'Extra keys',
+      },
+      help: {
+        'insertParagraph': 'Insert Paragraph',
+        'undo': 'Undoes the last command',
+        'redo': 'Redoes the last command',
+        'tab': 'Tab',
+        'untab': 'Untab',
+        'bold': 'Set a bold style',
+        'italic': 'Set a italic style',
+        'underline': 'Set a underline style',
+        'strikethrough': 'Set a strikethrough style',
+        'removeFormat': 'Clean a style',
+        'justifyLeft': 'Set left align',
+        'justifyCenter': 'Set center align',
+        'justifyRight': 'Set right align',
+        'justifyFull': 'Set full align',
+        'insertUnorderedList': 'Toggle unordered list',
+        'insertOrderedList': 'Toggle ordered list',
+        'outdent': 'Outdent on current paragraph',
+        'indent': 'Indent on current paragraph',
+        'formatPara': 'Change current block\'s format as a paragraph(P tag)',
+        'formatH1': 'Change current block\'s format as H1',
+        'formatH2': 'Change current block\'s format as H2',
+        'formatH3': 'Change current block\'s format as H3',
+        'formatH4': 'Change current block\'s format as H4',
+        'formatH5': 'Change current block\'s format as H5',
+        'formatH6': 'Change current block\'s format as H6',
+        'insertHorizontalRule': 'Insert horizontal rule',
+        'linkDialog.show': 'Show Link Dialog',
       },
       history: {
         undo: 'Буцаах',
-        redo: 'Дахин хийх'
+        redo: 'Дахин хийх',
       },
       specialChar: {
         specialChar: 'Тусгай тэмдэгт',
-        select: 'Тусгай тэмдэгт сонгох'
-      }
-    }
+        select: 'Тусгай тэмдэгт сонгох',
+      },
+    },
   });
 })(jQuery);

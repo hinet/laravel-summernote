@@ -1,4 +1,4 @@
-(function ($) {
+(function($) {
   $.extend($.summernote.lang, {
     'fa-IR': {
       font: {
@@ -9,7 +9,9 @@
         height: 'فاصله ی خطی',
         name: 'اسم فونت',
         strikethrough: 'Strike',
-        size: 'اندازه ی فونت'
+        subscript: 'Subscript',
+        superscript: 'Superscript',
+        size: 'اندازه ی فونت',
       },
       image: {
         image: 'تصویر',
@@ -20,17 +22,25 @@
         floatLeft: 'چسباندن به چپ',
         floatRight: 'چسباندن به راست',
         floatNone: 'بدون چسبندگی',
+        shapeRounded: 'Shape: Rounded',
+        shapeCircle: 'Shape: Circle',
+        shapeThumbnail: 'Shape: Thumbnail',
+        shapeNone: 'Shape: None',
         dragImageHere: 'یک تصویر را اینجا بکشید',
+        dropImage: 'Drop image or Text',
         selectFromFiles: 'فایل ها را انتخاب کنید',
+        maximumFileSize: 'حداکثر اندازه پرونده',
+        maximumFileSizeError: 'Maximum file size exceeded.',
         url: 'آدرس تصویر',
-        remove: 'حذف تصویر'
+        remove: 'حذف تصویر',
+        original: 'Original',
       },
       video: {
         video: 'ویدیو',
         videoLink: 'لینک ویدیو',
         insert: 'افزودن ویدیو',
         url: 'آدرس ویدیو ؟',
-        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion یا Youku)'
+        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion یا Youku)',
       },
       link: {
         link: 'لینک',
@@ -39,13 +49,20 @@
         edit: 'ویرایش',
         textToDisplay: 'متن جهت نمایش',
         url: 'این لینک به چه آدرسی باید برود ؟',
-        openInNewWindow: 'در یک پنجره ی جدید باز شود'
+        openInNewWindow: 'در یک پنجره ی جدید باز شود',
       },
       table: {
-        table: 'جدول'
+        table: 'جدول',
+        addRowAbove: 'افزودن ردیف بالا',
+        addRowBelow: 'افزودن ردیف پایین',
+        addColLeft: 'افزودن ستون چپ',
+        addColRight: 'افزودن ستون راست',
+        delRow: 'حذف ردیف',
+        delCol: 'حذف ستون',
+        delTable: 'حذف جدول',
       },
       hr: {
-        insert: 'افزودن خط افقی'
+        insert: 'افزودن خط افقی',
       },
       style: {
         style: 'استیل',
@@ -57,16 +74,16 @@
         h3: 'سرتیتر 3',
         h4: 'سرتیتر 4',
         h5: 'سرتیتر 5',
-        h6: 'سرتیتر 6'
+        h6: 'سرتیتر 6',
       },
       lists: {
         unordered: 'لیست غیر ترتیبی',
-        ordered: 'لیست ترتیبی'
+        ordered: 'لیست ترتیبی',
       },
       options: {
         help: 'راهنما',
         fullscreen: 'نمایش تمام صفحه',
-        codeview: 'مشاهده ی کد'
+        codeview: 'مشاهده ی کد',
       },
       paragraph: {
         paragraph: 'پاراگراف',
@@ -75,7 +92,7 @@
         left: 'چپ چین',
         center: 'میان چین',
         right: 'راست چین',
-        justify: 'بلوک چین'
+        justify: 'بلوک چین',
       },
       color: {
         recent: 'رنگ اخیرا استفاده شده',
@@ -85,7 +102,7 @@
         transparent: 'بی رنگ',
         setTransparent: 'تنظیم حالت بی رنگ',
         reset: 'بازنشاندن',
-        resetToDefault: 'حالت پیش فرض'
+        resetToDefault: 'حالت پیش فرض',
       },
       shortcut: {
         shortcuts: 'دکمه های میان بر',
@@ -93,13 +110,46 @@
         textFormatting: 'فرمت متن',
         action: 'عملیات',
         paragraphFormatting: 'فرمت پاراگراف',
-        documentStyle: 'استیل سند'
+        documentStyle: 'استیل سند',
+        extraKeys: 'Extra keys',
+      },
+      help: {
+        'insertParagraph': 'افزودن پاراگراف',
+        'undo': 'Undoes the last command',
+        'redo': 'Redoes the last command',
+        'tab': 'Tab',
+        'untab': 'Untab',
+        'bold': 'Set a bold style',
+        'italic': 'Set a italic style',
+        'underline': 'Set a underline style',
+        'strikethrough': 'Set a strikethrough style',
+        'removeFormat': 'Clean a style',
+        'justifyLeft': 'چپ چین',
+        'justifyCenter': 'وسط چین',
+        'justifyRight': 'راست چین',
+        'justifyFull': 'Set full align',
+        'insertUnorderedList': 'Toggle unordered list',
+        'insertOrderedList': 'Toggle ordered list',
+        'outdent': 'Outdent on current paragraph',
+        'indent': 'Indent on current paragraph',
+        'formatPara': 'Change current block\'s format as a paragraph(P tag)',
+        'formatH1': 'Change current block\'s format as H1',
+        'formatH2': 'Change current block\'s format as H2',
+        'formatH3': 'Change current block\'s format as H3',
+        'formatH4': 'Change current block\'s format as H4',
+        'formatH5': 'Change current block\'s format as H5',
+        'formatH6': 'Change current block\'s format as H6',
+        'insertHorizontalRule': 'Insert horizontal rule',
+        'linkDialog.show': 'Show Link Dialog',
       },
       history: {
         undo: 'واچیدن',
-        redo: 'بازچیدن'
-      }
-    }
+        redo: 'بازچیدن',
+      },
+      specialChar: {
+        specialChar: 'کاراکتر خاص',
+        select: 'انتخاب کاراکتر خاص',
+      },
+    },
   });
 })(jQuery);
-

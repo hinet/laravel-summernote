@@ -1,4 +1,4 @@
-(function ($) {
+(function($) {
   $.extend($.summernote.lang, {
     'hr-HR': {
       font: {
@@ -7,8 +7,11 @@
         underline: 'Podvučeno',
         clear: 'Ukloni stilove fonta',
         height: 'Visina linije',
+        name: 'Font Family',
         strikethrough: 'Precrtano',
-        size: 'Veličina fonta'
+        subscript: 'Subscript',
+        superscript: 'Superscript',
+        size: 'Veličina fonta',
       },
       image: {
         image: 'Slika',
@@ -19,17 +22,25 @@
         floatLeft: 'Poravnaj lijevo',
         floatRight: 'Poravnaj desno',
         floatNone: 'Bez poravnanja',
+        shapeRounded: 'Shape: Rounded',
+        shapeCircle: 'Shape: Circle',
+        shapeThumbnail: 'Shape: Thumbnail',
+        shapeNone: 'Shape: None',
         dragImageHere: 'Povuci sliku ovdje',
+        dropImage: 'Drop image or Text',
         selectFromFiles: 'Izaberi iz datoteke',
+        maximumFileSize: 'Maximum file size',
+        maximumFileSizeError: 'Maximum file size exceeded.',
         url: 'Adresa slike',
-        remove: 'Ukloni sliku'
+        remove: 'Ukloni sliku',
+        original: 'Original',
       },
       video: {
         video: 'Video',
         videoLink: 'Veza na video',
         insert: 'Ubaci video',
         url: 'URL video',
-        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion ili Youku)'
+        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion ili Youku)',
       },
       link: {
         link: 'Veza',
@@ -38,13 +49,20 @@
         edit: 'Uredi',
         textToDisplay: 'Tekst za prikaz',
         url: 'Internet adresa',
-        openInNewWindow: 'Otvori u novom prozoru'
+        openInNewWindow: 'Otvori u novom prozoru',
       },
       table: {
-        table: 'Tablica'
+        table: 'Tablica',
+        addRowAbove: 'Add row above',
+        addRowBelow: 'Add row below',
+        addColLeft: 'Add column left',
+        addColRight: 'Add column right',
+        delRow: 'Delete row',
+        delCol: 'Delete column',
+        delTable: 'Delete table',
       },
       hr: {
-        insert: 'Ubaci horizontalnu liniju'
+        insert: 'Ubaci horizontalnu liniju',
       },
       style: {
         style: 'Stil',
@@ -56,16 +74,16 @@
         h3: 'Naslov 3',
         h4: 'Naslov 4',
         h5: 'Naslov 5',
-        h6: 'Naslov 6'
+        h6: 'Naslov 6',
       },
       lists: {
         unordered: 'Obična lista',
-        ordered: 'Numerirana lista'
+        ordered: 'Numerirana lista',
       },
       options: {
         help: 'Pomoć',
         fullscreen: 'Preko cijelog ekrana',
-        codeview: 'Izvorni kôd'
+        codeview: 'Izvorni kôd',
       },
       paragraph: {
         paragraph: 'Paragraf',
@@ -74,7 +92,7 @@
         left: 'Poravnaj lijevo',
         center: 'Centrirano',
         right: 'Poravnaj desno',
-        justify: 'Poravnaj obostrano'
+        justify: 'Poravnaj obostrano',
       },
       color: {
         recent: 'Posljednja boja',
@@ -84,7 +102,7 @@
         transparent: 'Prozirna',
         setTransparent: 'Prozirna',
         reset: 'Poništi',
-        resetToDefault: 'Podrazumijevana'
+        resetToDefault: 'Podrazumijevana',
       },
       shortcut: {
         shortcuts: 'Prečice s tipkovnice',
@@ -93,12 +111,45 @@
         action: 'Akcija',
         paragraphFormatting: 'Formatiranje paragrafa',
         documentStyle: 'Stil dokumenta',
-        extraKeys: 'Dodatne kombinacije'
+        extraKeys: 'Dodatne kombinacije',
+      },
+      help: {
+        'insertParagraph': 'Insert Paragraph',
+        'undo': 'Undoes the last command',
+        'redo': 'Redoes the last command',
+        'tab': 'Tab',
+        'untab': 'Untab',
+        'bold': 'Set a bold style',
+        'italic': 'Set a italic style',
+        'underline': 'Set a underline style',
+        'strikethrough': 'Set a strikethrough style',
+        'removeFormat': 'Clean a style',
+        'justifyLeft': 'Set left align',
+        'justifyCenter': 'Set center align',
+        'justifyRight': 'Set right align',
+        'justifyFull': 'Set full align',
+        'insertUnorderedList': 'Toggle unordered list',
+        'insertOrderedList': 'Toggle ordered list',
+        'outdent': 'Outdent on current paragraph',
+        'indent': 'Indent on current paragraph',
+        'formatPara': 'Change current block\'s format as a paragraph(P tag)',
+        'formatH1': 'Change current block\'s format as H1',
+        'formatH2': 'Change current block\'s format as H2',
+        'formatH3': 'Change current block\'s format as H3',
+        'formatH4': 'Change current block\'s format as H4',
+        'formatH5': 'Change current block\'s format as H5',
+        'formatH6': 'Change current block\'s format as H6',
+        'insertHorizontalRule': 'Insert horizontal rule',
+        'linkDialog.show': 'Show Link Dialog',
       },
       history: {
         undo: 'Poništi',
-        redo: 'Ponovi'
-      }
-    }
+        redo: 'Ponovi',
+      },
+      specialChar: {
+        specialChar: 'SPECIAL CHARACTERS',
+        select: 'Select Special characters',
+      },
+    },
   });
 })(jQuery);

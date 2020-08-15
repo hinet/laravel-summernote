@@ -1,4 +1,4 @@
-(function ($) {
+(function($) {
   $.extend($.summernote.lang, {
     'lv-LV': {
       font: {
@@ -11,7 +11,7 @@
         strikethrough: 'Nosvītrots',
         superscript: 'Augšraksts',
         subscript: 'Apakšraksts',
-        size: 'Fonta lielums'
+        size: 'Fonta lielums',
       },
       image: {
         image: 'Attēls',
@@ -27,11 +27,20 @@
         shapeThumbnail: 'Forma: rāmītis',
         shapeNone: 'Forma: orģināla',
         dragImageHere: 'Ievēlciet attēlu šeit',
+        dropImage: 'Drop image or Text',
         selectFromFiles: 'Izvēlēties failu',
         maximumFileSize: 'Maksimālais faila izmērs',
         maximumFileSizeError: 'Faila izmērs pārāk liels!',
         url: 'Attēla URL',
-        remove: 'Dzēst attēlu'
+        remove: 'Dzēst attēlu',
+        original: 'Original',
+      },
+      video: {
+        video: 'Video',
+        videoLink: 'Video Link',
+        insert: 'Insert Video',
+        url: 'Video URL?',
+        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion or Youku)',
       },
       link: {
         link: 'Saite',
@@ -40,13 +49,20 @@
         edit: 'Rediģēt',
         textToDisplay: 'Saites saturs',
         url: 'Koks URL adresas yra susietas?',
-        openInNewWindow: 'Atvērt jaunā logā'
+        openInNewWindow: 'Atvērt jaunā logā',
       },
       table: {
-        table: 'Tabula'
+        table: 'Tabula',
+        addRowAbove: 'Add row above',
+        addRowBelow: 'Add row below',
+        addColLeft: 'Add column left',
+        addColRight: 'Add column right',
+        delRow: 'Delete row',
+        delCol: 'Delete column',
+        delTable: 'Delete table',
       },
       hr: {
-        insert: 'Ievietot līniju'
+        insert: 'Ievietot līniju',
       },
       style: {
         style: 'Stils',
@@ -58,16 +74,16 @@
         h3: 'Virsraksts h3',
         h4: 'Virsraksts h4',
         h5: 'Virsraksts h5',
-        h6: 'Virsraksts h6'
+        h6: 'Virsraksts h6',
       },
       lists: {
         unordered: 'Nenumurēts saraksts',
-        ordered: 'Numurēts saraksts'
+        ordered: 'Numurēts saraksts',
       },
       options: {
         help: 'Palīdzība',
         fullscreen: 'Pa visu ekrānu',
-        codeview: 'HTML kods'
+        codeview: 'HTML kods',
       },
       paragraph: {
         paragraph: 'Paragrāfs',
@@ -76,7 +92,7 @@
         left: 'Līdzināt pa kreisi',
         center: 'Centrēt',
         right: 'Līdzināt pa labi',
-        justify: 'Līdzināt gar abām malām'
+        justify: 'Līdzināt gar abām malām',
       },
       color: {
         recent: 'Nesen izmantotās',
@@ -86,7 +102,7 @@
         transparent: 'Caurspīdīgs',
         setTransparent: 'Iestatīt caurspīdīgumu',
         reset: 'Atjaunot',
-        resetToDefault: 'Atjaunot noklusējumu'
+        resetToDefault: 'Atjaunot noklusējumu',
       },
       shortcut: {
         shortcuts: 'Saīsnes',
@@ -95,11 +111,7 @@
         action: 'Darbība',
         paragraphFormatting: 'Paragrāfa formatēšana',
         documentStyle: 'Dokumenta stils',
-        extraKeys: 'Citas taustiņu kombinācijas'
-      },
-      history: {
-        undo: 'Atsauks (undo)',
-        redo: 'Atkārtot (redo)'
+        extraKeys: 'Citas taustiņu kombinācijas',
       },
       help: {
         insertParagraph: 'Ievietot Paragrāfu',
@@ -128,8 +140,16 @@
         formatH5: 'Mainīt bloka tipu uz virsrakstu H5',
         formatH6: 'Mainīt bloka tipu uz virsrakstu H6',
         insertHorizontalRule: 'Ievietot horizontālu līniju',
-        'linkDialog.show': 'Parādīt saites logu'
-      }
-    }
+        'linkDialog.show': 'Parādīt saites logu',
+      },
+      history: {
+        undo: 'Atsauks (undo)',
+        redo: 'Atkārtot (redo)',
+      },
+      specialChar: {
+        specialChar: 'SPECIAL CHARACTERS',
+        select: 'Select Special characters',
+      },
+    },
   });
 })(jQuery);
