@@ -1,6 +1,6 @@
 # Laravel-Summernote
 
-Summernote editor integration for Laravel 5.
+Summernote editor integration for Laravel.
 
 # 使用
 
