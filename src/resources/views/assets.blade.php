@@ -1,9 +1,9 @@
 <?php
 $lang = str_replace('_', '-', config('app.locale'));
 ?>
-<link rel="stylesheet" type="text/css" href="{{ asset('vendor/summernote/summernote.css') }}">
-<script type="text/javascript" src="{{ asset('vendor/summernote/summernote.js') }}"></script>
-<script type="text/javascript" src="{{ asset('vendor/summernote/lang/summernote-'.$lang.'.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/summernote/summernote.css') }}">
+<script type="text/javascript" src="{{ asset('assets/vendor/summernote/summernote.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/vendor/summernote/lang/summernote-'.$lang.'.js') }}"></script>
 
 <script>
     var summerUploadedImages = [], summernoteUploadedLength = 0, summernoteTotalFiles = 0;
