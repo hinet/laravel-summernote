@@ -23,7 +23,11 @@ $ composer require "hinet/laravel-summernote"
     ```php
     $ php artisan vendor:publish --provider='Hinet\LaravelSummernote\SummernoteServiceProvider'
     ```
-
+    如果发布异常可以使用:
+    ```php
+    $ php artisan vendor:publish
+    ```
+    然后选择Hinet\LaravelSummernote\SummernoteServiceProvider
 3. 模板引入编辑器
 
     这行的作用是引入编辑器需要的 css,js 等文件，所以你不需要再手动去引入它们。
@@ -39,13 +43,14 @@ $ composer require "hinet/laravel-summernote"
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $('#summernote').summernote($.extend(summernoteOptions, {
+                lang:'zh-CN',//根据config/app.php中配置的语言
                 height: 300,
             }));
         });
     </script>
 
     <!-- 编辑器容器 -->
-    <div id="summernote">Hello Summernote</div>
+    <input type="text" class="form-control" name="content" id="summernote">
     ```
 
 # 说明
