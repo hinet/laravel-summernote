@@ -35,7 +35,7 @@ class SummernoteServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__.'/resources/assets/summernote' => public_path('vendor/summernote'),
+            __DIR__.'/resources/assets/summernote' => public_path('assets/vendor/summernote'),
         ], 'assets');
 
         $this->publishes([
