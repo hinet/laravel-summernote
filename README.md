@@ -41,7 +41,7 @@ $ composer require "hinet/laravel-summernote"
     ```html
     <!-- 实例化编辑器 -->
     <script type="text/javascript">
-        jQuery(document).ready(function($) {
+        $(function() {
             $('#summernote').summernote($.extend(summernoteOptions, {
                 lang:'zh-CN',//根据config/app.php中配置的语言
                 height: 300,
