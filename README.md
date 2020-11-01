@@ -42,7 +42,7 @@ $ composer require "hinet/laravel-summernote"
     <!-- 实例化编辑器 -->
     <script type="text/javascript">
         $(function() {
-            $('#summernote').summernote($.extend(summernoteOptions, {
+            $('#content').summernote($.extend(summernoteOptions, {
                 lang:'zh-CN',//根据config/app.php中配置的语言
                 height: 300,
             }));
@@ -50,7 +50,7 @@ $ composer require "hinet/laravel-summernote"
     </script>
 
     <!-- 编辑器容器 -->
-    <input type="text" class="form-control" name="content" id="summernote">
+<textarea type="text" class="form-control" name="content" id="content"></textarea>
     ```
 
 # 说明
