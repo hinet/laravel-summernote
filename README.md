@@ -50,7 +50,8 @@ $ composer require "hinet/laravel-summernote"
     </script>
 
     <!-- 编辑器容器 -->
-<textarea type="text" class="form-control" name="content" id="content"></textarea>
+    <textarea type="text" class="form-control" name="content" id="content"></textarea>
+
     ```
 
 # 说明
