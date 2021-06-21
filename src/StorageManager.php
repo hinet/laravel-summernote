@@ -224,7 +224,7 @@ class StorageManager
         }
 
         if (!str_contains($path, $filename)) {
-            $path = str_finish($path, '/').$filename;
+            $path = \Str::finish($path, '/').$filename;
         }
 
         return $path;
